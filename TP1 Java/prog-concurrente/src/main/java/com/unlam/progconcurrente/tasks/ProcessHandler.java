@@ -46,7 +46,7 @@ public class ProcessHandler {
 
                 CompletableFuture<Void> combinedBFuture = CompletableFuture.allOf(eFuture, fFuture);
                 combinedBFuture.join();
-            } else if (letra.equals("D")) {
+            } else if (letra.equals(PROCESS_NAME_D)) {
                 CompletableFuture<Void> gFuture = CompletableFuture.runAsync(() -> crearProceso(PROCESS_NAME_G, p.pid()));
                 gFuture.join();
             }
